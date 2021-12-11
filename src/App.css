@@ -1,38 +1,51 @@
-.App {
+.container {
+  height: 90vh;
+  padding: 4rem;
+}
+.container header {
+  display: flex;
+  justify-content: center;
+}
+.container .inner-container {
+  display: flex;
+  height: 50%;
+}
+.container .inner-container .results {
+  flex-grow: 2;
+  padding: 2rem;
+  height: 70vh;
+  overflow-y: scroll;
+}
+.results table {
+  border: 1px solid black;
+}
+.results table thead tr th {
+  background-color: grey;
+}
+.results table tbody {
+  border: 1px solid grey;
+}
+.results table tbody tr td {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.results table tbody tr.sum-row {
+  background-color: lightgray;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .inner-container form {
+  padding: 2rem;
+  width: 20vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
-
-.App-link {
-  color: #61dafb;
+.container form .function {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container form .function input {
+  width: 2vw;
 }
